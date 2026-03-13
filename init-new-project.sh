@@ -21,40 +21,49 @@ echo "$TARGET_DIR"
 
 mkdir -p "$TARGET_DIR"
 
-cp "$SOURCE_DIR/README.md" "$TARGET_DIR/"
-cp "$SOURCE_DIR/AI_RULES.md" "$TARGET_DIR/"
-cp "$SOURCE_DIR/ARCHITECTURE.md" "$TARGET_DIR/"
-cp "$SOURCE_DIR/PRODUCT.md" "$TARGET_DIR/"
-cp "$SOURCE_DIR/STANDARDS.md" "$TARGET_DIR/"
-cp "$SOURCE_DIR/SUPABASE.md" "$TARGET_DIR/"
-cp "$SOURCE_DIR/README_AI.md" "$TARGET_DIR/"
-cp "$SOURCE_DIR/Makefile" "$TARGET_DIR/"
-cp "$SOURCE_DIR/bootstrap.sh" "$TARGET_DIR/"
+copy_if_exists() {
+  local source_path="$1"
+  local target_path="$2"
 
-mkdir -p "$TARGET_DIR/scripts"
-mkdir -p "$TARGET_DIR/docs"
-mkdir -p "$TARGET_DIR/prompts"
-mkdir -p "$TARGET_DIR/.github"
-mkdir -p "$TARGET_DIR/.continue"
+  if [ -e "$source_path" ]; then
+    cp -R "$source_path" "$target_path"
+  else
+    echo "WARNING: Missing source path: $source_path"
+  fi
+}
 
-cp -R "$SOURCE_DIR/scripts/"* "$TARGET_DIR/scripts/" 2>/dev/null || true
-cp -R "$SOURCE_DIR/docs/"* "$TARGET_DIR/docs/" 2>/dev/null || true
-cp -R "$SOURCE_DIR/prompts/"* "$TARGET_DIR/prompts/" 2>/dev/null || true
-cp -R "$SOURCE_DIR/.github" "$TARGET_DIR/" 2>/dev/null || true
-cp -R "$SOURCE_DIR/.continue" "$TARGET_DIR/" 2>/dev/null || true
-cp -R "$SOURCE_DIR/supabase" "$TARGET_DIR/" 2>/dev/null || true
-cp "$SOURCE_DIR/.gitignore" "$TARGET_DIR/" 2>/dev/null || true
+copy_if_exists "$SOURCE_DIR/README.md" "$TARGET_DIR/"
+copy_if_exists "$SOURCE_DIR/AI_RULES.md" "$TARGET_DIR/"
+copy_if_exists "$SOURCE_DIR/ARCHITECTURE.md" "$TARGET_DIR/"
+copy_if_exists "$SOURCE_DIR/PRODUCT.md" "$TARGET_DIR/"
+copy_if_exists "$SOURCE_DIR/STANDARDS.md" "$TARGET_DIR/"
+copy_if_exists "$SOURCE_DIR/SUPABASE.md" "$TARGET_DIR/"
+copy_if_exists "$SOURCE_DIR/README_AI.md" "$TARGET_DIR/"
+copy_if_exists "$SOURCE_DIR/Makefile" "$TARGET_DIR/"
+copy_if_exists "$SOURCE_DIR/bootstrap.sh" "$TARGET_DIR/"
+copy_if_exists "$SOURCE_DIR/.gitignore" "$TARGET_DIR/"
+
+copy_if_exists "$SOURCE_DIR/scripts" "$TARGET_DIR/"
+copy_if_exists "$SOURCE_DIR/docs" "$TARGET_DIR/"
+copy_if_exists "$SOURCE_DIR/prompts" "$TARGET_DIR/"
+copy_if_exists "$SOURCE_DIR/.github" "$TARGET_DIR/"
+copy_if_exists "$SOURCE_DIR/.continue" "$TARGET_DIR/"
+copy_if_exists "$SOURCE_DIR/supabase" "$TARGET_DIR/"
 
 cd "$TARGET_DIR"
+
 git init
 git branch -M main
 
 echo ""
 echo "New project created successfully."
 echo ""
-echo "Next:"
+echo "Created at:"
+echo "$TARGET_DIR"
+echo ""
+echo "Next steps:"
 echo "cd $TARGET_DIR"
+echo "ls"
 echo "./scripts/verify-repo.sh"
 echo "make verify"
-echo "git add ."
-echo "git commit -m \"Initial starter setup\""
+echo "git status"
