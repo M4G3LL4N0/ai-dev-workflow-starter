@@ -1,41 +1,30 @@
 #!/usr/bin/env bash
 
-set -euo pipefail
+set -e
 
-ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-cd "$ROOT_DIR"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
 
-missing=0
-
-require_file() {
+check_file() {
   local path="$1"
-  if [[ ! -f "$path" ]]; then
-    echo "ERROR: Required file missing: $path" >&2
-    missing=1
+  if [ ! -f "$REPO_ROOT/$path" ]; then
+    echo "ERROR: Required file missing: $path"
+    exit 1
   fi
 }
 
-require_dir() {
+check_dir() {
   local path="$1"
-  if [[ ! -d "$path" ]]; then
-    echo "ERROR: Required directory missing: $path" >&2
-    missing=1
+  if [ ! -d "$REPO_ROOT/$path" ]; then
+    echo "ERROR: Required directory missing: $path"
+    exit 1
   fi
 }
 
-# Required documentation files
-require_file "README.md"
-require_file "AI_RULES.md"
-require_file "ARCHITECTURE.md"
+check_file "README.md"
+check_file "AI_RULES.md"
+check_file "ARCHITECTURE.md"
+check_dir ".github/ISSUE_TEMPLATE"
+check_file ".github/workflows/ci.yml"
 
-# GitHub templates
-require_dir ".github/ISSUE_TEMPLATE"
-
-# CI workflow
-require_file ".github/workflows/ci.yml"
-
-if [[ "$missing" -ne 0 ]]; then
-  exit 1
-fi
-
-echo "Repository verification passed."
+echo "SUCCESS: All required repo files and folders are present."

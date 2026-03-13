@@ -1,5 +1,5 @@
 verify:
-	bash scripts/verify-repo.sh
+	./scripts/verify-repo.sh
 
 lint:
 	echo "lint step placeholder"
