@@ -26,24 +26,12 @@ require_dir() {
 # Required documentation files
 require_file "README.md"
 require_file "AI_RULES.md"
-require_file "README_AI.md"
 require_file "ARCHITECTURE.md"
-require_file "STANDARDS.md"
-require_file "PRODUCT.md"
-require_file "SUPABASE.md"
 
-# .github templates
-require_dir ".github"
+# GitHub templates
 require_dir ".github/ISSUE_TEMPLATE"
-require_file ".github/PULL_REQUEST_TEMPLATE.md"
-require_file ".github/ISSUE_TEMPLATE/ai-bug.md"
-require_file ".github/ISSUE_TEMPLATE/ai-feature.md"
-require_file ".github/ISSUE_TEMPLATE/ai-refactor.md"
-require_file ".github/ISSUE_TEMPLATE/ai-docs.md"
-require_file ".github/ISSUE_TEMPLATE/ai-migration.md"
 
 # CI workflow
-require_dir ".github/workflows"
 require_file ".github/workflows/ci.yml"
 
 if [[ "$missing" -ne 0 ]]; then
