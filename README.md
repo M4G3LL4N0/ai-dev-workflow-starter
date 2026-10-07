@@ -44,7 +44,7 @@ Generated from this repository's own source tree: every count, route and module 
 <picture>
   <source media="(prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/M4G3LL4N0/ai-dev-workflow-starter/main/.github-art/surfaces/hero-reduced.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/M4G3LL4N0/ai-dev-workflow-starter/main/.github-art/surfaces/hero-light.svg">
-  <img alt="Identity diagram for ai-dev-workflow-starter" src="https://raw.githubusercontent.com/M4G3LL4N0/ai-dev-workflow-starter/main/.github-art/surfaces/hero.svg">
+  <img alt="Identity diagram for ai-dev-workflow-starter" src="https://raw.githubusercontent.com/M4G3LL4N0/ai-dev-workflow-starter/main/.github-art/surfaces/hero-motion.svg">
 </picture>
 
 #### Modules
@@ -52,7 +52,7 @@ Generated from this repository's own source tree: every count, route and module 
 <picture>
   <source media="(prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/M4G3LL4N0/ai-dev-workflow-starter/main/.github-art/surfaces/architecture-reduced.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/M4G3LL4N0/ai-dev-workflow-starter/main/.github-art/surfaces/architecture-light.svg">
-  <img alt="Modules diagram for ai-dev-workflow-starter" src="https://raw.githubusercontent.com/M4G3LL4N0/ai-dev-workflow-starter/main/.github-art/surfaces/architecture.svg">
+  <img alt="Modules diagram for ai-dev-workflow-starter" src="https://raw.githubusercontent.com/M4G3LL4N0/ai-dev-workflow-starter/main/.github-art/surfaces/architecture-motion.svg">
 </picture>
 
 #### Build and tests
@@ -60,7 +60,7 @@ Generated from this repository's own source tree: every count, route and module 
 <picture>
   <source media="(prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/M4G3LL4N0/ai-dev-workflow-starter/main/.github-art/surfaces/build-reduced.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/M4G3LL4N0/ai-dev-workflow-starter/main/.github-art/surfaces/build-light.svg">
-  <img alt="Build and tests diagram for ai-dev-workflow-starter" src="https://raw.githubusercontent.com/M4G3LL4N0/ai-dev-workflow-starter/main/.github-art/surfaces/build.svg">
+  <img alt="Build and tests diagram for ai-dev-workflow-starter" src="https://raw.githubusercontent.com/M4G3LL4N0/ai-dev-workflow-starter/main/.github-art/surfaces/build-motion.svg">
 </picture>
 
 #### Entry points
@@ -68,7 +68,7 @@ Generated from this repository's own source tree: every count, route and module 
 <picture>
   <source media="(prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/M4G3LL4N0/ai-dev-workflow-starter/main/.github-art/surfaces/terminal-reduced.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/M4G3LL4N0/ai-dev-workflow-starter/main/.github-art/surfaces/terminal-light.svg">
-  <img alt="Entry points diagram for ai-dev-workflow-starter" src="https://raw.githubusercontent.com/M4G3LL4N0/ai-dev-workflow-starter/main/.github-art/surfaces/terminal.svg">
+  <img alt="Entry points diagram for ai-dev-workflow-starter" src="https://raw.githubusercontent.com/M4G3LL4N0/ai-dev-workflow-starter/main/.github-art/surfaces/terminal-motion.svg">
 </picture>
 
 #### Routes
@@ -76,7 +76,7 @@ Generated from this repository's own source tree: every count, route and module 
 <picture>
   <source media="(prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/M4G3LL4N0/ai-dev-workflow-starter/main/.github-art/surfaces/data_flow-reduced.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/M4G3LL4N0/ai-dev-workflow-starter/main/.github-art/surfaces/data_flow-light.svg">
-  <img alt="Routes diagram for ai-dev-workflow-starter" src="https://raw.githubusercontent.com/M4G3LL4N0/ai-dev-workflow-starter/main/.github-art/surfaces/data_flow.svg">
+  <img alt="Routes diagram for ai-dev-workflow-starter" src="https://raw.githubusercontent.com/M4G3LL4N0/ai-dev-workflow-starter/main/.github-art/surfaces/data_flow-motion.svg">
 </picture>
 
 #### Identity object
@@ -84,7 +84,7 @@ Generated from this repository's own source tree: every count, route and module 
 <picture>
   <source media="(prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/M4G3LL4N0/ai-dev-workflow-starter/main/.github-art/surfaces/footer-reduced.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/M4G3LL4N0/ai-dev-workflow-starter/main/.github-art/surfaces/footer-light.svg">
-  <img alt="Identity object diagram for ai-dev-workflow-starter" src="https://raw.githubusercontent.com/M4G3LL4N0/ai-dev-workflow-starter/main/.github-art/surfaces/footer.svg">
+  <img alt="Identity object diagram for ai-dev-workflow-starter" src="https://raw.githubusercontent.com/M4G3LL4N0/ai-dev-workflow-starter/main/.github-art/surfaces/footer-motion.svg">
 </picture>
 
 <!-- TRILLIONX:presentation:end -->
